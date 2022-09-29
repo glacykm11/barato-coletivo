@@ -1,8 +1,24 @@
 <section class="container">
-    <app-navbar></app-navbar>
-    <ng-container *ngFor="let hotel of hoteis">
-        <p>{{ hotel.nome }}</p>
-        <p>{{ hotel.descricao }}</p>
-        <p>{{ hotel.preco }}</p>
-    </ng-container>
+  <app-navbar></app-navbar>
+
+  <p class="container__title">Hoteis</p>
+  <div *ngFor="let hotel of hoteis">
+    <p>{{ hotel.nome }}</p>
+    <p>{{ hotel.descricao }}</p>
+    <p>{{ hotel.preco }}</p>
+  </div>
+
+  <p class="container__title">Gastronomia</p>
+  <div *ngFor="let hotel of hoteis">
+    <p>{{ hotel.nome }}</p>
+    <p>{{ hotel.descricao }}</p>
+    <p>{{ hotel.preco }}</p>
+  </div>
+
+  <p class="container__title">Entretenimento</p>
+  <div *ngFor="let hotel of hoteis">
+    <p>{{ hotel.nome }}</p>
+    <p>{{ hotel.descricao }}</p>
+    <p>{{ hotel.preco }}</p>
+  </div>
 </section>
