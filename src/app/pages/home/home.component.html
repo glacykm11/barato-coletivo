@@ -1,1 +1,8 @@
-<p>home works!</p>
+<section class="container">
+    <app-navbar></app-navbar>
+    <ng-container *ngFor="let hotel of hoteis">
+        <p>{{ hotel.nome }}</p>
+        <p>{{ hotel.descricao }}</p>
+        <p>{{ hotel.preco }}</p>
+    </ng-container>
+</section>
