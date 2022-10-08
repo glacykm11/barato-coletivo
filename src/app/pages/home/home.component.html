@@ -2,23 +2,35 @@
   <app-navbar></app-navbar>
 
   <p class="container__title">Hoteis</p>
-  <div *ngFor="let hotel of hoteis">
-    <p>{{ hotel.nome }}</p>
-    <p>{{ hotel.descricao }}</p>
-    <p>{{ hotel.preco }}</p>
+  <div class="container__card">
+    <ng-container *ngFor="let hotel of hoteis">
+      <app-card
+        [descricao]="hotel.descricao"
+        [titulo]="hotel.nome"
+        [preco]="hotel.preco"
+      ></app-card>
+    </ng-container>
   </div>
 
   <p class="container__title">Gastronomia</p>
-  <div *ngFor="let hotel of hoteis">
-    <p>{{ hotel.nome }}</p>
-    <p>{{ hotel.descricao }}</p>
-    <p>{{ hotel.preco }}</p>
+  <div class="container__card">
+    <ng-container *ngFor="let gastronomia of gastronomias">
+      <app-card
+        [descricao]="gastronomia.descricao"
+        [titulo]="gastronomia.nome"
+        [preco]="gastronomia.preco"
+      ></app-card>
+    </ng-container>
   </div>
 
   <p class="container__title">Entretenimento</p>
-  <div *ngFor="let hotel of hoteis">
-    <p>{{ hotel.nome }}</p>
-    <p>{{ hotel.descricao }}</p>
-    <p>{{ hotel.preco }}</p>
+  <div class="container__card">
+    <ng-container *ngFor="let entretenimento of entretenimentos">
+      <app-card
+        [descricao]="entretenimento.descricao"
+        [titulo]="entretenimento.nome"
+        [preco]="entretenimento.preco"
+      ></app-card>
+    </ng-container>
   </div>
 </section>
