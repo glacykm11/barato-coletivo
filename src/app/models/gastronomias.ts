@@ -1,6 +1,8 @@
 export interface Gastronomias {
-    nome: string;
-    descricao: string,
-    preco: number,
-    imagemUrl: string;
+  id: string;
+  nome: string;
+  categoria: string;
+  descricao: string;
+  preco: number;
+  imagemUrl: string;
 }
