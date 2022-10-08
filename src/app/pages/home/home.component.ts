@@ -19,4 +19,8 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  comprar(event) {
+    console.log(event);
+  }
 }
