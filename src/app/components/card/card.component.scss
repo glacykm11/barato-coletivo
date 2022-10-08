@@ -1,3 +1,25 @@
-.card__imagem {
-    max-width: 90%;
+.card {
+
+    &__imagem {
+        max-width: 80%;
+    }
+
+    &__titulo,
+    &__descricao,
+    &__preco {
+        margin: 8px 0;
+    }
+
+    &__botao {
+        display: flex;
+        all: unset;
+        background-color: black;
+        color: white;
+        border-radius: 8px;
+        height: 20px;
+        width: 78%;
+        padding: 5px;
+        text-align: center;
+        cursor: pointer;
+    }
 }
