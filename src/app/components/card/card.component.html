@@ -1,1 +1,11 @@
-<p>card works!</p>
+<section class="card">
+  <article>
+    <img class="card__imagem" [src]="imagemUrl" [alt]="'Imagem' + titulo" />
+
+    <h4 class="card__titulo">{{ titulo }}</h4>
+
+    <p class="card__descricao">{{ descricao }}</p>
+
+    <p class="card__preco">{{ preco | currency: "BRL" }}</p>
+  </article>
+</section>

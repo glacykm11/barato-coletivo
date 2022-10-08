@@ -5,9 +5,7 @@ import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [NavbarComponent, CardComponent],
-  imports: [
-    CommonModule
-  ],
-  exports: [NavbarComponent]
+  imports: [CommonModule],
+  exports: [NavbarComponent, CardComponent],
 })
-export class ComponentsModule { }
+export class ComponentsModule {}
