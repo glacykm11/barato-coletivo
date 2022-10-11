@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Entretenimentos } from 'src/app/models/entretenimentos';
 import { Gastronomias } from 'src/app/models/gastronomias';
 import { Hoteis } from 'src/app/models/hoteis';
@@ -16,11 +17,12 @@ export class HomeComponent implements OnInit {
   gastronomias: Gastronomias[] = GASTRONOMIAS;
   entretenimentos: Entretenimentos[] = ENTRETENIMENTOS;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
   comprar(event) {
+    this.router.navigate([`oferta/${event}`]);
     console.log(event);
   }
 }
