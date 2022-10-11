@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { OfertaModule } from './pages/oferta/oferta.module';
 import { HomeModule } from './pages/home/home.module';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { HomeModule } from './pages/home/home.module';
     AppRoutingModule,
     HomeModule,
     OfertaModule,
+    ComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
