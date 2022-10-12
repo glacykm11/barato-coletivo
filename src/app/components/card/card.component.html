@@ -1,11 +1,15 @@
 <section class="card">
-  <img class="card__imagem" [src]="imagemUrl" [alt]="'Imagem' + titulo" />
+  <img
+    class="card__imagem"
+    [src]="ofertas.imagemUrl ? ofertas.imagemUrl : imagemUrl"
+    [alt]="'Imagem' + ofertas.nome"
+  />
 
-  <h4 class="card__titulo">{{ titulo }}</h4>
+  <h4 class="card__titulo">{{ ofertas.nome }}</h4>
 
-  <p class="card__descricao">{{ descricao }}</p>
+  <p class="card__descricao">{{ ofertas.descricao }}</p>
 
-  <p class="card__preco">{{ preco | currency: "BRL" }}</p>
+  <p class="card__preco">{{ ofertas.preco | currency: "BRL" }}</p>
 
-  <button class="card__botao" (click)="emitirComprar(id)">Comprar</button>
+  <button class="card__botao" (click)="emitirComprar(ofertas)">Comprar</button>
 </section>

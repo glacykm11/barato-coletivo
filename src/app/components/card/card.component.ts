@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Oferta } from 'src/app/models/oferta';
 
 @Component({
   selector: 'app-card',
@@ -6,18 +7,16 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
-  @Input() id: string;
-  @Input() imagemUrl: string = '../../../assets/images/hotel-presidente-4s.jpg';
-  @Input() titulo: string;
-  @Input() descricao: string;
-  @Input() preco: number;
-  @Output() cliqueComprar = new EventEmitter<string>();
+  @Input() ofertas: Oferta;
+  @Output() cliqueComprar = new EventEmitter<Oferta>();
+
+  imagemUrl: string = '../../../assets/images/hotel-presidente-4s.jpg';
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  emitirComprar(id: string) {
-    this.cliqueComprar.emit(id);
+  emitirComprar(ofertaSelecionada: Oferta) {
+    this.cliqueComprar.emit(ofertaSelecionada);
   }
 }
