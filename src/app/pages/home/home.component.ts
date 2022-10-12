@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Entretenimentos } from 'src/app/models/entretenimentos';
-import { Gastronomias } from 'src/app/models/gastronomias';
-import { Hoteis } from 'src/app/models/hoteis';
+import { Oferta } from 'src/app/models/oferta';
+import { OfertasService } from 'src/app/services/ofertas/ofertas.service';
 import { ENTRETENIMENTOS } from 'src/assets/mocks/mock-entretenimentos';
 import { GASTRONOMIAS } from 'src/assets/mocks/mock-gastronomias';
 import { HOTEIS } from 'src/assets/mocks/mock-hoteis';
@@ -13,16 +12,17 @@ import { HOTEIS } from 'src/assets/mocks/mock-hoteis';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  hoteis: Hoteis[] = HOTEIS;
-  gastronomias: Gastronomias[] = GASTRONOMIAS;
-  entretenimentos: Entretenimentos[] = ENTRETENIMENTOS;
+  hoteis: Oferta[] = HOTEIS;
+  gastronomias: Oferta[] = GASTRONOMIAS;
+  entretenimentos: Oferta[] = ENTRETENIMENTOS;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private ofertasService: OfertasService) {}
 
   ngOnInit(): void {}
 
-  comprar(event) {
-    this.router.navigate([`oferta/${event}`]);
+  comprar(event: Oferta) {
+    this.router.navigate([`oferta/${event.id}`]);
+    this.ofertasService.setOfertaSelecionada(event);
     console.log(event);
   }
 }

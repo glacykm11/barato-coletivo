@@ -2,13 +2,7 @@
   <p class="container__title">Hoteis</p>
   <div class="container__card">
     <ng-container *ngFor="let hotel of hoteis">
-      <app-card
-        [id]="hotel.id"
-        [descricao]="hotel.descricao"
-        [titulo]="hotel.nome"
-        [preco]="hotel.preco"
-        (cliqueComprar)="comprar($event)"
-      ></app-card>
+      <app-card [ofertas]="hotel" (cliqueComprar)="comprar($event)"></app-card>
     </ng-container>
   </div>
 
@@ -16,10 +10,7 @@
   <div class="container__card">
     <ng-container *ngFor="let gastronomia of gastronomias">
       <app-card
-        [id]="gastronomia.id"
-        [descricao]="gastronomia.descricao"
-        [titulo]="gastronomia.nome"
-        [preco]="gastronomia.preco"
+        [ofertas]="gastronomia"
         (cliqueComprar)="comprar($event)"
       ></app-card>
     </ng-container>
@@ -29,10 +20,7 @@
   <div class="container__card">
     <ng-container *ngFor="let entretenimento of entretenimentos">
       <app-card
-        [id]="entretenimento.id"
-        [descricao]="entretenimento.descricao"
-        [titulo]="entretenimento.nome"
-        [preco]="entretenimento.preco"
+        [ofertas]="entretenimento"
         (cliqueComprar)="comprar($event)"
       ></app-card>
     </ng-container>
