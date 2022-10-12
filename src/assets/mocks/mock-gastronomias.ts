@@ -2,7 +2,7 @@ import { Gastronomias } from 'src/app/models/gastronomias';
 
 export const GASTRONOMIAS: Gastronomias[] = [
   {
-    id: '1',
+    id: '5',
     nome: 'Gastronomia Long Beach',
     categoria: 'gastronomia',
     descricao: '2 diárias em quarto vistas para o mar',
@@ -10,7 +10,7 @@ export const GASTRONOMIAS: Gastronomias[] = [
     imagemUrl: '',
   },
   {
-    id: '2',
+    id: '6',
     nome: 'Gastronomia Long Beach',
     categoria: 'gastronomia',
     descricao: '2 diárias em quarto vistas para o mar',
@@ -18,7 +18,7 @@ export const GASTRONOMIAS: Gastronomias[] = [
     imagemUrl: '',
   },
   {
-    id: '3',
+    id: '7',
     nome: 'Gastronomia Long Beach',
     categoria: 'gastronomia',
     descricao: '2 diárias em quarto vistas para o mar',
@@ -26,7 +26,7 @@ export const GASTRONOMIAS: Gastronomias[] = [
     imagemUrl: '',
   },
   {
-    id: '4',
+    id: '8',
     nome: 'Gastronomia Long Beach',
     categoria: 'gastronomia',
     descricao: '2 diárias em quarto vistas para o mar',

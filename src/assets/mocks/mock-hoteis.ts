@@ -2,7 +2,7 @@ import { Hoteis } from 'src/app/models/hoteis';
 
 export const HOTEIS: Hoteis[] = [
   {
-    id: '1',
+    id: '9',
     nome: 'Hotel Long Beach',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
@@ -10,7 +10,7 @@ export const HOTEIS: Hoteis[] = [
     imagemUrl: '',
   },
   {
-    id: '2',
+    id: '10',
     nome: 'Hotel Long Beach',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
@@ -18,7 +18,7 @@ export const HOTEIS: Hoteis[] = [
     imagemUrl: '',
   },
   {
-    id: '3',
+    id: '11',
     nome: 'Hotel Long Beach',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
@@ -26,7 +26,7 @@ export const HOTEIS: Hoteis[] = [
     imagemUrl: '',
   },
   {
-    id: '4',
+    id: '12',
     nome: 'Hotel Long Beach',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
