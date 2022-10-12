@@ -1,4 +1,4 @@
-export interface Entretenimentos {
+export interface Oferta {
   id: string;
   nome: string;
   categoria: string;
