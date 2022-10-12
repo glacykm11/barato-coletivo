@@ -23,6 +23,5 @@ export class HomeComponent implements OnInit {
   comprar(event: Oferta) {
     this.router.navigate([`oferta/${event.id}`]);
     this.ofertasService.setOfertaSelecionada(event);
-    console.log(event);
   }
 }

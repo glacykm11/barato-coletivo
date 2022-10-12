@@ -14,7 +14,7 @@ export class OfertasService {
     this.ofertaSelecionada.next(oferta);
   }
 
-  getOfertaSelecionada(): Observable<Oferta> {
+  getOfertaSelecionada(): Observable<any> {
     return this.ofertaSelecionada.asObservable();
   }
 }
