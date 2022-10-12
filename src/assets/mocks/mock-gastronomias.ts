@@ -1,6 +1,6 @@
-import { Gastronomias } from 'src/app/models/gastronomias';
+import { Oferta } from 'src/app/models/oferta';
 
-export const GASTRONOMIAS: Gastronomias[] = [
+export const GASTRONOMIAS: Oferta[] = [
   {
     id: '5',
     nome: 'Gastronomia Long Beach',

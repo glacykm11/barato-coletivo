@@ -1,13 +1,13 @@
-import { Entretenimentos } from 'src/app/models/entretenimentos';
+import { Oferta } from 'src/app/models/oferta';
 
-export const ENTRETENIMENTOS: Entretenimentos[] = [
+export const ENTRETENIMENTOS: Oferta[] = [
   {
     id: '1',
     nome: 'Entretenimento Long Beach',
     categoria: 'entretenimento',
     descricao: '2 diárias em quarto vistas para o mar',
     preco: 100,
-    imagemUrl: '',
+    imagemUrl: '../../../assets/images/hotel-presidente-4s.jpg',
   },
   {
     id: '2',
