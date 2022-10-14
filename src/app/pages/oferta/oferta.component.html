@@ -1,18 +1,18 @@
 <section class="container">
-  <section>
-    <aside class="container__imagens">
+  <section class="container__oferta">
+    <figure class="container__imagens">
       <img src="../../../assets/images/hotel-presidente-4s.jpg" />
-    </aside>
+    </figure>
     <section class="container__informacoes">
       <h3>
         {{ oferta.nome }}
       </h3>
 
-      <p>
+      <p class="container__textos">
         {{ oferta.descricao }} + <span>{{ oferta.descricao }}</span>
       </p>
-      <p>por apenas</p>
-      <p>{{ oferta.preco | currency: "BRL" }}</p>
+      <p class="container__textos">por apenas</p>
+      <p class="container__textos">{{ oferta.preco | currency: "BRL" }}</p>
       <button>Comprar</button>
     </section>
   </section>

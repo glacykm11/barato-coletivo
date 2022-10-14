@@ -1,7 +1,27 @@
 .container {
     margin-top: 32px;
 
+    &__oferta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__informacoes {
+        text-align: center;
+        width: 50%;
+        margin-left: 10%;
+    }
+
     &__titulo {
         margin: 16px 0;
     }
+
+    &__textos {
+        margin: 12px 0;
+    }
+}
+
+img {
+    width: 85%;
 }
