@@ -5,34 +5,34 @@
     </figure>
     <section class="container__informacoes">
       <h3>
-        {{ oferta.nome }}
+        {{ oferta?.nome }}
       </h3>
 
       <p class="container__textos">
-        {{ oferta.descricao }} + <span>{{ oferta.descricao }}</span>
+        {{ oferta?.descricao }} + <span>{{ oferta?.descricao }}</span>
       </p>
       <p class="container__textos">por apenas</p>
-      <p class="container__textos">{{ oferta.preco | currency: "BRL" }}</p>
-      <button>Comprar</button>
+      <p class="container__textos">{{ oferta?.preco | currency: "BRL" }}</p>
+      <button (click)="navegarParaPagamento()">Comprar</button>
     </section>
   </section>
 
   <section class="container__detalhes">
     <h3 class="container__titulo">Detalhes da oferta</h3>
-    <p>Oferta inclui: {{ oferta.descricao }}</p>
-    <p>Oferta inclui: {{ oferta.descricao }}</p>
-    <p>Oferta inclui: {{ oferta.descricao }}</p>
-    <p>Oferta inclui: {{ oferta.descricao }}</p>
-    <p>Oferta inclui: {{ oferta.descricao }}</p>
-    <p>Oferta inclui: {{ oferta.descricao }}</p>
+    <p>Oferta inclui: {{ oferta?.descricao }}</p>
+    <p>Oferta inclui: {{ oferta?.descricao }}</p>
+    <p>Oferta inclui: {{ oferta?.descricao }}</p>
+    <p>Oferta inclui: {{ oferta?.descricao }}</p>
+    <p>Oferta inclui: {{ oferta?.descricao }}</p>
+    <p>Oferta inclui: {{ oferta?.descricao }}</p>
   </section>
   <section class="container__destaques">
     <h3 class="container__titulo">Destaques da oferta</h3>
-    <p>Oferta inclui: {{ oferta.descricao }}</p>
-    <p>Oferta inclui: {{ oferta.descricao }}</p>
-    <p>Oferta inclui: {{ oferta.descricao }}</p>
-    <p>Oferta inclui: {{ oferta.descricao }}</p>
-    <p>Oferta inclui: {{ oferta.descricao }}</p>
-    <p>Oferta inclui: {{ oferta.descricao }}</p>
+    <p>Oferta inclui: {{ oferta?.descricao }}</p>
+    <p>Oferta inclui: {{ oferta?.descricao }}</p>
+    <p>Oferta inclui: {{ oferta?.descricao }}</p>
+    <p>Oferta inclui: {{ oferta?.descricao }}</p>
+    <p>Oferta inclui: {{ oferta?.descricao }}</p>
+    <p>Oferta inclui: {{ oferta?.descricao }}</p>
   </section>
 </section>

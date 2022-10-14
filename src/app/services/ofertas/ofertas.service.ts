@@ -10,8 +10,8 @@ export class OfertasService {
 
   constructor() {}
 
-  setOfertaSelecionada(oferta: Oferta): void {
-    this.ofertaSelecionada.next(oferta);
+  setOfertaSelecionada(ofertaSelecionada: Oferta): void {
+    this.ofertaSelecionada.next(ofertaSelecionada);
   }
 
   getOfertaSelecionada(): Observable<any> {
