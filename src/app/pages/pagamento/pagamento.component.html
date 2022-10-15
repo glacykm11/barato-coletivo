@@ -1,6 +1,6 @@
 <section class="container">
   <section class="container__pagamento">
-    <h1>Pagamento</h1>
+    <h1 class="container__titulo">Pagamento</h1>
 
     <form [formGroup]="pagamentoForm" (ngSubmit)="onSubmit()">
       <input
@@ -36,7 +36,8 @@
       </button>
     </form>
   </section>
+  <div class="container__linha"></div>
   <section class="container__resumo-compra">
-    <h1>Resumo da compra</h1>
+    <h1 class="container__titulo">Resumo da compra</h1>
   </section>
 </section>

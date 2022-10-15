@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+
+    &__titulo {
+        margin: 32px 0;
+    }
+
+    &__linha {
+        margin: 30px 16px 0 16px;
+        border-left: 4px solid black;
+        height: 500px;
+    }
+
+    &__pagamento {
+        width: 50%;
+
+        form {
+            width: 180px;
+
+            input {
+                margin: 8px 0;
+            }
+        }
+    }
+}
