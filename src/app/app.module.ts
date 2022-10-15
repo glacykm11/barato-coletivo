@@ -5,8 +5,8 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { OfertaModule } from './pages/oferta/oferta.module';
+import { ComponentsModule } from './shared/components/components.module';
 import { HomeModule } from './pages/home/home.module';
-import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [AppComponent],

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { OfertasService } from 'src/app/services/ofertas/ofertas.service';
+import { OfertasService } from 'src/app/shared/services/ofertas/ofertas.service';
 
 @Component({
   selector: 'app-pagamento',

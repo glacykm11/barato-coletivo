@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Oferta } from 'src/app/models/oferta';
-import { OfertasService } from 'src/app/services/ofertas/ofertas.service';
+import { OfertasService } from 'src/app/shared/services/ofertas/ofertas.service';
 import { ENTRETENIMENTOS } from 'src/assets/mocks/mock-entretenimentos';
 import { GASTRONOMIAS } from 'src/assets/mocks/mock-gastronomias';
 import { HOTEIS } from 'src/assets/mocks/mock-hoteis';
