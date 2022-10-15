@@ -11,7 +11,11 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  voltarHome() {
+  navegarParaHome() {
     this.router.navigate(['/']);
+  }
+
+  navegarParaCheckout() {
+    this.router.navigate(['/pagamento']);
   }
 }
