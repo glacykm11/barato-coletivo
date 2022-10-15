@@ -18,7 +18,8 @@ export class OfertaComponent implements OnInit {
       .subscribe((response) => (this.oferta = response));
   }
 
-  navegarParaPagamento() {
+  navegarParaPagamento(oferta: Oferta) {
+    this.ofertaService.setOfertaCompradas(oferta);
     this.router.navigate(['/pagamento']);
   }
 }

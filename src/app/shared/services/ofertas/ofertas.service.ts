@@ -7,6 +7,7 @@ import { Oferta } from 'src/app/models/oferta';
 })
 export class OfertasService {
   private ofertaSelecionada = new BehaviorSubject<Oferta>(null);
+  private ofertasCompradas: Oferta[] = [];
 
   constructor() {}
 
@@ -16,5 +17,17 @@ export class OfertasService {
 
   getOfertaSelecionada(): Observable<any> {
     return this.ofertaSelecionada.asObservable();
+  }
+
+  setOfertaCompradas(ofertaComprada: Oferta): void {
+    this.ofertasCompradas.push(ofertaComprada);
+  }
+
+  getOfertaCompradas(): Oferta[] {
+    return this.ofertasCompradas;
+  }
+
+  limparOfertaCompradas(): void {
+    this.ofertasCompradas = [];
   }
 }

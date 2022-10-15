@@ -46,16 +46,11 @@
   <section class="container__resumo-compra">
     <h1 class="container__titulo">Resumo da compra</h1>
     <section class="container__precos">
-      <article>
-        <p class="container__texto">1x item 1</p>
-        <p class="container__texto">R$ 100,00</p>
+      <article *ngFor="let oferta of ofertas">
+        <p class="container__texto">1x {{ oferta?.nome }}</p>
+        <p class="container__texto">{{ oferta?.preco | currency: "BRL" }}</p>
       </article>
-      <article>
-        <p class="container__texto">2x item 2</p>
-        <p class="container__texto">R$ 200,00</p>
-      </article>
-
-      <p class="container__texto--total">Total: R$ 300,00</p>
+      <p class="container__texto--total">Total: {{ totalOfertas }}</p>
     </section>
   </section>
 </section>
