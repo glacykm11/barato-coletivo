@@ -1,1 +1,42 @@
-<p>pagamento works!</p>
+<section class="container">
+  <section class="container__pagamento">
+    <h1>Pagamento</h1>
+
+    <form [formGroup]="pagamentoForm" (ngSubmit)="onSubmit()">
+      <input
+        id="first-name"
+        type="text"
+        formControlName="numeroCartao"
+        placeholder="Cartão"
+      />
+      <input
+        id="nomeImpressoCartao"
+        type="text"
+        formControlName="nomeImpressoCartao"
+        placeholder="Nome impresso"
+      />
+
+      <input
+        id="validadeCartao"
+        type="text"
+        formControlName="validadeCartao"
+        placeholder="Validade"
+      />
+      <span>
+        <input
+          id="codigoSegurancaCartao"
+          type="text"
+          formControlName="codigoSegurancaCartao"
+          placeholder="Código de segurança"
+        />
+      </span>
+
+      <button type="submit" [disabled]="!pagamentoForm.valid">
+        Pagar agora!
+      </button>
+    </form>
+  </section>
+  <section class="container__resumo-compra">
+    <h1>Resumo da compra</h1>
+  </section>
+</section>
