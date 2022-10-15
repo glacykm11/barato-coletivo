@@ -9,7 +9,7 @@ import { OfertasService } from 'src/app/services/ofertas/ofertas.service';
   styleUrls: ['./oferta.component.scss'],
 })
 export class OfertaComponent implements OnInit {
-  oferta;
+  oferta: Oferta;
   constructor(private ofertaService: OfertasService, private router: Router) {}
 
   ngOnInit(): void {
