@@ -1,13 +1,13 @@
 <section class="container">
   <p class="container__title">Hoteis</p>
-  <div class="container__card">
+  <div class="container__card scrolling-wrapper">
     <ng-container *ngFor="let hotel of hoteis">
       <app-card [ofertas]="hotel" (cliqueComprar)="comprar($event)"></app-card>
     </ng-container>
   </div>
 
   <p class="container__title">Gastronomia</p>
-  <div class="container__card">
+  <div class="container__card scrolling-wrapper">
     <ng-container *ngFor="let gastronomia of gastronomias">
       <app-card
         [ofertas]="gastronomia"
@@ -17,7 +17,7 @@
   </div>
 
   <p class="container__title">Entretenimento</p>
-  <div class="container__card">
+  <div class="container__card scrolling-wrapper">
     <ng-container *ngFor="let entretenimento of entretenimentos">
       <app-card
         [ofertas]="entretenimento"

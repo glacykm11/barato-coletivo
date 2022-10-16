@@ -1,12 +1,20 @@
 .card {
+    margin: 1rem;
+
 
     &__imagem {
-        max-width: 80%;
-    }
-
-    &__titulo,
-    &__descricao,
-    &__preco {
-        margin: 8px 0;
+        min-width: 200px;
+        height: 200px;
     }
 }
+
+//     &__imagem {
+//         max-width: 80%;
+//     }
+
+//     &__titulo,
+//     &__descricao,
+//     &__preco {
+//         margin: 8px 0;
+//     }
+// }

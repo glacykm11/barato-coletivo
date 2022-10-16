@@ -9,3 +9,9 @@
         display: flex;
     }
 }
+
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
