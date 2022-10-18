@@ -34,7 +34,7 @@ export const HOTEIS: Oferta[] = [
     imagemUrl: '',
   },
   {
-    id: '9',
+    id: '13',
     nome: 'Hotel Long Beach',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
@@ -42,7 +42,7 @@ export const HOTEIS: Oferta[] = [
     imagemUrl: '../../../assets/images/hotel-presidente-4s.jpg',
   },
   {
-    id: '10',
+    id: '14',
     nome: 'Hotel Long Beach',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
@@ -50,7 +50,7 @@ export const HOTEIS: Oferta[] = [
     imagemUrl: '',
   },
   {
-    id: '11',
+    id: '15',
     nome: 'Hotel Long Beach',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
@@ -58,7 +58,7 @@ export const HOTEIS: Oferta[] = [
     imagemUrl: '',
   },
   {
-    id: '12',
+    id: '16',
     nome: 'Hotel Long Beach',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
