@@ -1,7 +1,7 @@
 <section class="container">
   <section class="container__oferta">
     <figure class="container__imagens">
-      <img src="../../../assets/images/hotel-presidente-4s.jpg" />
+      <img [src]="oferta.imagemUrl ? oferta.imagemUrl : imagemGenerica" />
     </figure>
     <section class="container__informacoes">
       <h3>

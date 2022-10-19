@@ -10,6 +10,8 @@ import { OfertasService } from 'src/app/shared/services/ofertas/ofertas.service'
 })
 export class OfertaComponent implements OnInit {
   oferta: Oferta;
+  imagemGenerica = '../../../assets/images/hotel-presidente-4s.jpg';
+
   constructor(private ofertaService: OfertasService, private router: Router) {}
 
   ngOnInit(): void {
