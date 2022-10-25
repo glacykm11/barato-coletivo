@@ -1,9 +1,20 @@
 <section class="container">
   <p class="container__title">Hoteis</p>
-  <div class="container__card scrolling-wrapper">
-    <ng-container *ngFor="let hotel of hoteis">
-      <app-card [ofertas]="hotel" (cliqueComprar)="comprar($event)"></app-card>
-    </ng-container>
+  <div class="teste">
+    <button id="botao-esquerdo" class="botao-slide" (click)="scrollLeft()">
+      <
+    </button>
+    <div id="scrolling-wrapper" class="container__card scrolling-wrapper">
+      <ng-container *ngFor="let hotel of hoteis">
+        <app-card
+          [ofertas]="hotel"
+          (cliqueComprar)="comprar($event)"
+        ></app-card>
+      </ng-container>
+    </div>
+    <button id="botao-direito" class="botao-slide" (click)="scrollRight()">
+      >
+    </button>
   </div>
 
   <p class="container__title">Gastronomia</p>
