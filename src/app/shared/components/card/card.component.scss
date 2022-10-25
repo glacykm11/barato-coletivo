@@ -6,4 +6,9 @@
         height: 200px;
         max-width: 300px;
     }
+
+    &__titulo,
+    &__preco {
+        margin-bottom: 8px;
+    }
 }
