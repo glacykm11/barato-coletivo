@@ -15,7 +15,7 @@ export const initialState: Oferta = {
 
 export const ofertaEscolhidaReducer = createReducer(
   initialState,
-  on(OfertaActions.ofertaEscolhida, (state, { payload: oferta }) => ({
+  on(OfertaActions.ofertaEscolhida, (state, { oferta: oferta }) => ({
     ...state,
     oferta
   }))
