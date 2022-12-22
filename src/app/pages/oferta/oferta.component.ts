@@ -21,15 +21,15 @@ export class OfertaComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.ofertaService
-      .getOfertaSelecionada()
-      .subscribe((response) => (this.oferta = response));
-    this.oferta$ = this.store.select('oferta');
-    this.oferta$.subscribe((resp) => console.log(resp));
+    this.obterOfertaSelecionada();
   }
 
-  navegarParaPagamento(oferta: Oferta) {
-    this.ofertaService.setOfertaCompradas(oferta);
+  obterOfertaSelecionada() {
+    this.oferta$ = this.store.select('oferta');
+    this.oferta$.subscribe((resp) => (this.oferta = resp));
+  }
+
+  navegarParaPagamento() {
     this.router.navigate(['/pagamento']);
   }
 }

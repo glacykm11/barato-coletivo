@@ -12,8 +12,8 @@
         {{ oferta?.descricao }} + <span>{{ oferta?.descricao }}</span>
       </p>
       <p class="container__textos">por apenas</p>
-      <p class="container__textos">{{ oferta?.preco | currency: "BRL" }}</p>
-      <button (click)="navegarParaPagamento(oferta)">Comprar</button>
+      <p class="container__textos">{{ oferta?.preco | currency : "BRL" }}</p>
+      <button (click)="navegarParaPagamento()">Comprar</button>
     </section>
   </section>
 
