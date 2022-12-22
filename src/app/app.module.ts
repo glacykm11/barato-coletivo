@@ -7,7 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { OfertaModule } from './pages/oferta/oferta.module';
 import { ComponentsModule } from './shared/components/components.module';
 import { HomeModule } from './pages/home/home.module';
-import { StoreModule } from '@ngrx/store';
+import { StoreModule, StoreRootModule } from '@ngrx/store';
+import {
+  ofertaEscolhidaReducer,
+  ofertaFeatureKey,
+} from './shared/store/reducers/oferta.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +23,11 @@ import { StoreModule } from '@ngrx/store';
     HomeModule,
     OfertaModule,
     ComponentsModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({}),
+    StoreModule.forFeature(ofertaFeatureKey, ofertaEscolhidaReducer),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

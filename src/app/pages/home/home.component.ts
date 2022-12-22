@@ -1,10 +1,14 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { Oferta } from 'src/app/models/oferta';
 import { OfertasService } from 'src/app/shared/services/ofertas/ofertas.service';
+import { ofertaEscolhida } from 'src/app/shared/store/actions/oferta.actions';
 import { ENTRETENIMENTOS } from 'src/assets/mocks/mock-entretenimentos';
 import { GASTRONOMIAS } from 'src/assets/mocks/mock-gastronomias';
 import { HOTEIS } from 'src/assets/mocks/mock-hoteis';
+import * as OfertaActions from '../../shared/store/actions/oferta.actions';
 
 @Component({
   selector: 'app-home',
@@ -16,13 +20,21 @@ export class HomeComponent implements OnInit {
   gastronomias: Oferta[] = GASTRONOMIAS;
   entretenimentos: Oferta[] = ENTRETENIMENTOS;
 
-  constructor(private router: Router, private ofertasService: OfertasService) {}
+  private oferta$: Observable<Oferta>;
+
+  constructor(
+    private router: Router,
+    private ofertasService: OfertasService,
+    private store: Store<{ oferta: Oferta }>
+  ) {
+    //this.oferta$ = store.select('oferta');
+  }
 
   ngOnInit(): void {}
 
   comprar(event: Oferta) {
     this.router.navigate([`oferta/${event.id}`]);
-    this.ofertasService.setOfertaSelecionada(event);
+    this.store.dispatch(OfertaActions.ofertaEscolhida({ oferta: event }));
   }
 
   scrollLeft() {
