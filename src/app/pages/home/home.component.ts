@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Oferta } from 'src/app/models/oferta';
-import { OfertasService } from 'src/app/shared/services/ofertas/ofertas.service';
 import { ENTRETENIMENTOS } from 'src/assets/mocks/mock-entretenimentos';
 import { GASTRONOMIAS } from 'src/assets/mocks/mock-gastronomias';
 import { HOTEIS } from 'src/assets/mocks/mock-hoteis';
@@ -21,11 +20,7 @@ export class HomeComponent implements OnInit {
 
   private oferta$: Observable<Oferta>;
 
-  constructor(
-    private router: Router,
-    private ofertasService: OfertasService,
-    private store: Store
-  ) {}
+  constructor(private router: Router, private store: Store) {}
 
   ngOnInit(): void {}
 
