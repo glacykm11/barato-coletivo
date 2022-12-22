@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
 import { Oferta } from 'src/app/models/oferta';
-import { OfertasService } from 'src/app/shared/services/ofertas/ofertas.service';
 import { selectFeatureOferta } from 'src/app/shared/store/selectors/oferta.selector';
 
 @Component({
@@ -23,7 +21,7 @@ export class PagamentoComponent implements OnInit {
   totalOfertas = 0;
   oferta;
 
-  constructor(private ofertaService: OfertasService, private store: Store) {}
+  constructor(private store: Store) {}
 
   ngOnInit(): void {
     this.obterOfertasSelecionadas();
@@ -32,7 +30,7 @@ export class PagamentoComponent implements OnInit {
 
   onSubmit() {
     console.log('tá pago!');
-    this.ofertaService.limparOfertaCompradas();
+    //this.ofertaService.limparOfertaCompradas();
   }
 
   obterOfertasSelecionadas() {

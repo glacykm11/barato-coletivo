@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Oferta } from 'src/app/models/oferta';
-import { OfertasService } from 'src/app/shared/services/ofertas/ofertas.service';
 import { selectFeatureOferta } from 'src/app/shared/store/selectors/oferta.selector';
 
 @Component({
@@ -16,11 +15,7 @@ export class OfertaComponent implements OnInit {
   oferta$: Observable<Oferta>;
   imagemGenerica = '../../../assets/images/hotel-presidente-4s.jpg';
 
-  constructor(
-    private ofertaService: OfertasService,
-    private router: Router,
-    private store: Store<{ oferta: Oferta }>
-  ) {}
+  constructor(private router: Router, private store: Store) {}
 
   ngOnInit(): void {
     this.obterOfertaSelecionada();
