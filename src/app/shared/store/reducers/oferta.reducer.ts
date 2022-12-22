@@ -24,7 +24,3 @@ export const ofertaEscolhidaReducer = createReducer(
     imagemUrl: oferta.imagemUrl,
   }))
 );
-
-// export function reducer(state: Oferta | undefined, action: Action) {
-//   return ofertaEscolhidaReducer(state, action);
-// }

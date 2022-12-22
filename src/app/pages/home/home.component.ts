@@ -4,7 +4,6 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Oferta } from 'src/app/models/oferta';
 import { OfertasService } from 'src/app/shared/services/ofertas/ofertas.service';
-import { ofertaEscolhida } from 'src/app/shared/store/actions/oferta.actions';
 import { ENTRETENIMENTOS } from 'src/assets/mocks/mock-entretenimentos';
 import { GASTRONOMIAS } from 'src/assets/mocks/mock-gastronomias';
 import { HOTEIS } from 'src/assets/mocks/mock-hoteis';
@@ -25,10 +24,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private router: Router,
     private ofertasService: OfertasService,
-    private store: Store<{ oferta: Oferta }>
-  ) {
-    //this.oferta$ = store.select('oferta');
-  }
+    private store: Store
+  ) {}
 
   ngOnInit(): void {}
 
