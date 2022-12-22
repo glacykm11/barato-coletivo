@@ -11,7 +11,7 @@ export const ofertasSelecionadasReducer = createReducer(
   on(OfertaActions.limparCarrinho, (_) => []),
   on(
     OfertaActions.ofertasSelecionadas,
-    (state, { ofertasSelecionadas: ofertaSelecionadas }) => ({
+    (state, { ofertasSelecionadas: ofertasSelecionadas }) => ({
       ...state,
       ofertasSelecionadas
     })
