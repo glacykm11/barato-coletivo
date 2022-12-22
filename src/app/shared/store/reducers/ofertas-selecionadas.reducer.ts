@@ -9,7 +9,6 @@ export const initialState: Oferta[] = [];
 export const ofertasSelecionadasReducer = createReducer(
   initialState,
   on(OfertaActions.limparCarrinho, (_) => []),
-
   on(
     OfertaActions.ofertasSelecionadas,
     (state, { ofertasSelecionadas }) => ({})
