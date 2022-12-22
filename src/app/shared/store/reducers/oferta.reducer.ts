@@ -15,12 +15,8 @@ export const initialState: Oferta = {
 
 export const ofertaEscolhidaReducer = createReducer(
   initialState,
-  on(OfertaActions.ofertaEscolhida, (state, { oferta }) => ({
-    id: oferta.id,
-    nome: oferta.nome,
-    categoria: oferta.categoria,
-    descricao: oferta.descricao,
-    preco: oferta.preco,
-    imagemUrl: oferta.imagemUrl,
+  on(OfertaActions.ofertaEscolhida, (state, { payload: oferta }) => ({
+    ...state,
+    oferta
   }))
 );
