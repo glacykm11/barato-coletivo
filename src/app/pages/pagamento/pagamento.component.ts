@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Oferta } from 'src/app/models/oferta';
-import { selectFeatureOferta } from 'src/app/shared/store/selectors/oferta.selector';
+import { selectOfertasSelecionadas } from '../../shared/store/selectors/ofertas-selecionadas.selector';
 import * as OfertaActions from '../../shared/store/actions/oferta.actions';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-pagamento',
@@ -17,7 +18,7 @@ export class PagamentoComponent implements OnInit {
     validadeCartao: new FormControl(''),
     codigoSegurancaCartao: new FormControl(''),
   });
-  oferta$: any;
+  oferta$: Observable<Oferta[]>;
   ofertas: Oferta[] = [];
   totalOfertas = 0;
   oferta;
@@ -35,12 +36,8 @@ export class PagamentoComponent implements OnInit {
   }
 
   obterOfertasSelecionadas() {
-    this.oferta$ = this.store.select(selectFeatureOferta);
-    this.oferta$.subscribe((resp) => this.armazenarOfertasSelecionadas(resp));
-  }
-
-  armazenarOfertasSelecionadas(ofertaSelecionada: Oferta) {
-    this.ofertas.push(ofertaSelecionada);
+    this.oferta$ = this.store.select(selectOfertasSelecionadas);
+    this.oferta$.subscribe((resp) => console.log(resp));
   }
 
   totalOfertasCompradas() {

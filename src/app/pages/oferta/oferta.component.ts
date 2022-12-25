@@ -14,7 +14,7 @@ export class OfertaComponent implements OnInit {
   oferta: Oferta;
   oferta$: Observable<Oferta>;
   imagemGenerica = '../../../assets/images/hotel-presidente-4s.jpg';
-  ofertasSelecionadas: Oferta[];
+  ofertasSelecionadas: Oferta[] = [];
 
   constructor(private router: Router, private store: Store) {}
 
@@ -24,14 +24,22 @@ export class OfertaComponent implements OnInit {
 
   obterOfertaSelecionada() {
     this.oferta$ = this.store.select(selectFeatureOferta);
-    this.oferta$.subscribe((resp) => (this.oferta = resp));
-  }
-
-  armazenarOfertaSelecionada() {
-    this.store.dispatch(OfertaActions.ofertaEscolhida({ oferta: this.oferta }));
+    this.oferta$.subscribe((resp) => {
+      this.oferta = resp;
+      this.ofertasSelecionadas.push(this.oferta);
+    });
   }
 
   navegarParaPagamento() {
+    this.armazenarOfertaSelecionada();
     this.router.navigate(['/pagamento']);
+  }
+
+  armazenarOfertaSelecionada() {
+    this.store.dispatch(
+      OfertaActions.ofertasSelecionadas({
+        payload: this.ofertasSelecionadas,
+      })
+    );
   }
 }

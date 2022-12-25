@@ -7,8 +7,8 @@ export const ofertaEscolhida = createAction(
 );
 
 export const ofertasSelecionadas = createAction(
-  '[Oferta Page] Oferta selecionadas',
-  props<{ ofertasSelecionadas: Oferta[] }>()
+  '[Oferta Page] Ofertas selecionadas',
+  props<{ payload: Oferta[] }>()
 );
 
 export const limparCarrinho = createAction('[Pagamento Page] Limpar carrinho');
