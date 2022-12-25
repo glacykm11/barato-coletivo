@@ -1,10 +1,17 @@
 <section class="container">
   <p class="container__title">Hoteis</p>
-  <div class="teste">
-    <button id="botao-esquerdo" class="botao-slide" (click)="scrollLeft()">
+  <div class="container__cards">
+    <button
+      id="botao-esquerdo"
+      class="botao-slide"
+      (click)="scrollLeft('scrolling-wrapper-hoteis')"
+    >
       <
     </button>
-    <div id="scrolling-wrapper" class="container__card scrolling-wrapper">
+    <div
+      id="scrolling-wrapper-hoteis"
+      class="container__card scrolling-wrapper"
+    >
       <ng-container *ngFor="let hotel of hoteis">
         <app-card
           [ofertas]="hotel"
@@ -12,28 +19,70 @@
         ></app-card>
       </ng-container>
     </div>
-    <button id="botao-direito" class="botao-slide" (click)="scrollRight()">
+    <button
+      id="botao-direito"
+      class="botao-slide"
+      (click)="scrollRight('scrolling-wrapper-hoteis')"
+    >
       >
     </button>
   </div>
 
   <p class="container__title">Gastronomia</p>
-  <div class="container__card scrolling-wrapper">
-    <ng-container *ngFor="let gastronomia of gastronomias">
-      <app-card
-        [ofertas]="gastronomia"
-        (cliqueComprar)="comprar($event)"
-      ></app-card>
-    </ng-container>
+  <div class="container__cards">
+    <button
+      id="botao-esquerdo"
+      class="botao-slide"
+      (click)="scrollLeft('scrolling-wrapper-gastronomias')"
+    >
+      <
+    </button>
+    <div
+      id="scrolling-wrapper-gastronomias"
+      class="container__card scrolling-wrapper"
+    >
+      <ng-container *ngFor="let gastronomia of gastronomias">
+        <app-card
+          [ofertas]="gastronomia"
+          (cliqueComprar)="comprar($event)"
+        ></app-card>
+      </ng-container>
+    </div>
+    <button
+      id="botao-direito"
+      class="botao-slide"
+      (click)="scrollRight('scrolling-wrapper-gastronomias')"
+    >
+      >
+    </button>
   </div>
 
   <p class="container__title">Entretenimento</p>
-  <div class="container__card scrolling-wrapper">
-    <ng-container *ngFor="let entretenimento of entretenimentos">
-      <app-card
-        [ofertas]="entretenimento"
-        (cliqueComprar)="comprar($event)"
-      ></app-card>
-    </ng-container>
+  <div class="container__cards">
+    <button
+      id="botao-esquerdo"
+      class="botao-slide"
+      (click)="scrollLeft('scrolling-wrapper-entretenimentos')"
+    >
+      <
+    </button>
+    <div
+      id="scrolling-wrapper-entretenimentos"
+      class="container__card scrolling-wrapper"
+    >
+      <ng-container *ngFor="let entretenimento of entretenimentos">
+        <app-card
+          [ofertas]="entretenimento"
+          (cliqueComprar)="comprar($event)"
+        ></app-card>
+      </ng-container>
+    </div>
+    <button
+      id="botao-direito"
+      class="botao-slide"
+      (click)="scrollRight('scrolling-wrapper-entretenimentos')"
+    >
+      >
+    </button>
   </div>
 </section>

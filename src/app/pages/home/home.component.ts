@@ -29,13 +29,13 @@ export class HomeComponent implements OnInit {
     this.store.dispatch(OfertaActions.ofertaEscolhida({ oferta: event }));
   }
 
-  scrollLeft() {
-    var container = document.getElementById('scrolling-wrapper');
+  scrollLeft(id: string) {
+    var container = document.getElementById(id);
     this.sideScroll(container, 'left', 40, 260, 10);
   }
 
-  scrollRight() {
-    var container = document.getElementById('scrolling-wrapper');
+  scrollRight(id: string) {
+    var container = document.getElementById(id);
     this.sideScroll(container, 'right', 40, 260, 10);
   }
 
