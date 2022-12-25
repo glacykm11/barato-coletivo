@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Oferta } from 'src/app/models/oferta';
 import { selectFeatureOferta } from 'src/app/shared/store/selectors/oferta.selector';
+import * as OfertaActions from '../../shared/store/actions/oferta.actions';
 
 @Component({
   selector: 'app-pagamento',
@@ -17,7 +18,7 @@ export class PagamentoComponent implements OnInit {
     codigoSegurancaCartao: new FormControl(''),
   });
   oferta$: any;
-  ofertas: Oferta[];
+  ofertas: Oferta[] = [];
   totalOfertas = 0;
   oferta;
 
@@ -29,13 +30,17 @@ export class PagamentoComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('tá pago!');
-    //this.ofertaService.limparOfertaCompradas();
+    alert('Sua compra foi finalizada com sucesso!');
+    this.store.dispatch(OfertaActions.limparCarrinho());
   }
 
   obterOfertasSelecionadas() {
     this.oferta$ = this.store.select(selectFeatureOferta);
-    this.oferta$.subscribe((resp) => console.log(resp));
+    this.oferta$.subscribe((resp) => this.armazenarOfertasSelecionadas(resp));
+  }
+
+  armazenarOfertasSelecionadas(ofertaSelecionada: Oferta) {
+    this.ofertas.push(ofertaSelecionada);
   }
 
   totalOfertasCompradas() {
