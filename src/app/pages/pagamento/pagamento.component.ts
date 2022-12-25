@@ -33,11 +33,12 @@ export class PagamentoComponent implements OnInit {
   onSubmit() {
     alert('Sua compra foi finalizada com sucesso!');
     this.store.dispatch(OfertaActions.limparCarrinho());
+    this.totalOfertas = 0;
   }
 
   obterOfertasSelecionadas() {
     this.oferta$ = this.store.select(selectOfertasSelecionadas);
-    this.oferta$.subscribe((resp) => console.log(resp));
+    this.oferta$.subscribe((resp) => (this.ofertas = resp));
   }
 
   totalOfertasCompradas() {
