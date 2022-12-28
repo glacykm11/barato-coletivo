@@ -2,8 +2,9 @@
     margin: 1rem;
 
     &__imagem {
+        object-fit: cover;
+        width: 256px;
         height: 200px;
-        max-width: 260px;
     }
 
     &__titulo,
