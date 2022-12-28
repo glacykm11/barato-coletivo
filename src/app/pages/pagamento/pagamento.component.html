@@ -5,29 +5,35 @@
     <form [formGroup]="pagamentoForm" (ngSubmit)="onSubmit()">
       <input
         id="first-name"
-        type="number"
+        type="text"
         formControlName="numeroCartao"
         placeholder="Cartão"
+        mask="0*"
+        maxlength="16"
       />
       <input
         id="nomeImpressoCartao"
         type="text"
         formControlName="nomeImpressoCartao"
         placeholder="Nome impresso"
+        mask="S*"
+        maxlength="50"
       />
       <article>
         <input
           id="validadeCartao"
-          type="number"
+          type="text"
           formControlName="validadeCartao"
           placeholder="Validade"
+          mask="00/00/0000"
         />
 
         <input
           id="codigoSegurancaCartao"
-          type="number"
+          type="text"
           formControlName="codigoSegurancaCartao"
           placeholder="Código de segurança"
+          maxlength="3"
         />
       </article>
 
