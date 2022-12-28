@@ -48,9 +48,11 @@
     <section class="container__precos">
       <article *ngFor="let oferta of ofertas">
         <p class="container__texto">1x {{ oferta?.nome }}</p>
-        <p class="container__texto">{{ oferta?.preco | currency: "BRL" }}</p>
+        <p class="container__texto">{{ oferta?.preco | currency : "BRL" }}</p>
       </article>
-      <p class="container__texto--total">Total: {{ totalOfertas }}</p>
+      <p class="container__texto--total">
+        Total: {{ totalOfertas | currency : "BRL" }}
+      </p>
     </section>
   </section>
 </section>
