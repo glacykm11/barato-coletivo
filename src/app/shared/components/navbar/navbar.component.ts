@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { Oferta } from 'src/app/models/oferta';
+import { selectOfertasSelecionadas } from '../../store/selectors/ofertas-selecionadas.selector';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +11,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  constructor(private router: Router) {}
+  ofertasSelecionadas$: Observable<Oferta[]>;
+  qntdDeOfertasSelecionadas: number;
 
-  ngOnInit(): void {}
+  constructor(private router: Router, private store: Store) {}
+
+  ngOnInit(): void {
+    this.recuperarOfertasSelecionadas();
+  }
+
+  recuperarOfertasSelecionadas() {
+    this.ofertasSelecionadas$ = this.store.select(selectOfertasSelecionadas);
+    this.ofertasSelecionadas$.subscribe((resp) => {
+      this.qntdDeOfertasSelecionadas = resp.length;
+    });
+  }
 
   navegarParaHome() {
     this.router.navigate(['/']);

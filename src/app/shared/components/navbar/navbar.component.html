@@ -6,9 +6,16 @@
   />
   <p class="navbar__title">Barato Coletivo</p>
 
-  <img
-    class="navbar__icon"
-    src="../../../assets/images/icon-carrinho.png"
-    (click)="navegarParaCheckout()"
-  />
+  <div class="navbar__carrinho">
+    <div class="navbar__carrinho--circulo" *ngIf="qntdDeOfertasSelecionadas">
+      <p class="navbar__carrinho--itens-selecionados">
+        {{ qntdDeOfertasSelecionadas }}
+      </p>
+    </div>
+    <img
+      class="navbar__icon"
+      src="../../../assets/images/icon-carrinho.png"
+      (click)="navegarParaCheckout()"
+    />
+  </div>
 </section>
