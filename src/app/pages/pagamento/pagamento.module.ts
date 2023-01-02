@@ -5,7 +5,7 @@ import { PagamentoRoutingModule } from './pagamento-routing.module';
 import { PagamentoComponent } from './pagamento.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgxMaskModule } from 'ngx-mask';
+import { DirectivesModule } from 'src/app/shared/directives/directives.module';
 
 @NgModule({
   declarations: [PagamentoComponent],
@@ -14,9 +14,7 @@ import { NgxMaskModule } from 'ngx-mask';
     PagamentoRoutingModule,
     RouterModule,
     ReactiveFormsModule,
-    NgxMaskModule.forRoot({
-      showMaskTyped: true,
-    }),
+    DirectivesModule,
   ],
 })
 export class PagamentoModule {}
