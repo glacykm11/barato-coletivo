@@ -18,16 +18,11 @@ export class MascaraDataDirective {
   @HostListener('keydown', ['$event']) onKeyDownBackspace(
     event: KeyboardEvent
   ) {
-    if (event.key === 'Backspace' && this.inputLenght == 6) {
-      this.el.nativeElement.value =
-        this.el.nativeElement.value.slice(0, -1) + '';
-    }
     if (
-      (event.key === 'Backspace' || event.key === 'Delete') &&
-      this.inputLenght == 3
+      (event.key === 'Backspace' && this.inputLenght == 2) ||
+      (event.key === 'Backspace' && this.inputLenght == 5)
     ) {
-      this.el.nativeElement.value =
-        this.el.nativeElement.value.slice(0, -1) + '';
+      this.el.nativeElement.value = this.el.nativeElement.value.slice(0, -1);
     }
   }
 }
