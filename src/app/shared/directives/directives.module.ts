@@ -6,6 +6,6 @@ import { MascaraNumeroCartaoDirective } from './mascara-numero-cartao/mascara-nu
 @NgModule({
   declarations: [MascaraDataDirective, MascaraNumeroCartaoDirective],
   imports: [CommonModule],
-  exports: [MascaraDataDirective],
+  exports: [MascaraDataDirective, MascaraNumeroCartaoDirective],
 })
 export class DirectivesModule {}
