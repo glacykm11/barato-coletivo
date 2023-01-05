@@ -1,7 +1,7 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appMascaraNumeroCartao]',
+  selector: '[mascaraNumeroCartao]',
 })
 export class MascaraNumeroCartaoDirective {
   constructor(private el: ElementRef) {}
