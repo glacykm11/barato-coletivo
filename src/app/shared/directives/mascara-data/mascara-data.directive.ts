@@ -8,7 +8,14 @@ export class MascaraDataDirective {
 
   constructor(private el: ElementRef) {}
 
-  @HostListener('input') onKeyPress() {
+  @HostListener('input', ['$event']) onInputChange(event: Event) {
+    const initalValue = this.el.nativeElement.value;
+    this.el.nativeElement.value = initalValue.replace(/[A-z]*/g, '');
+
+    if (initalValue !== this.el.nativeElement.value) {
+      event.stopPropagation();
+    }
+
     this.inputLenght = this.el.nativeElement.value.length;
     if (this.inputLenght === 2 || this.inputLenght === 5) {
       this.el.nativeElement.value += '/';
