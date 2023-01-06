@@ -24,4 +24,16 @@ export class MascaraNumeroCartaoDirective {
       this.el.nativeElement.value += ' ';
     }
   }
+
+  @HostListener('keydown', ['$event']) onKeyDownBackspace(
+    event: KeyboardEvent
+  ) {
+    if (
+      (event.key === 'Backspace' && this.inputLenght == 4) ||
+      (event.key === 'Backspace' && this.inputLenght == 9) ||
+      (event.key === 'Backspace' && this.inputLenght == 14)
+    ) {
+      this.el.nativeElement.value = this.el.nativeElement.value.slice(0, -1);
+    }
+  }
 }
