@@ -11,7 +11,7 @@ export const HOTEIS: Oferta[] = [
   },
   {
     id: '18',
-    nome: 'Hotel Long Beach',
+    nome: 'Hotel Mirante',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
     preco: 700,
@@ -20,7 +20,7 @@ export const HOTEIS: Oferta[] = [
   },
   {
     id: '19',
-    nome: 'Hotel Long Beach',
+    nome: 'Hotel Recanto Divino',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
     preco: 600,
@@ -29,7 +29,7 @@ export const HOTEIS: Oferta[] = [
   },
   {
     id: '20',
-    nome: 'Hotel Long Beach',
+    nome: 'Hotel Mineiro',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
     preco: 500,
@@ -38,7 +38,7 @@ export const HOTEIS: Oferta[] = [
   },
   {
     id: '21',
-    nome: 'Hotel Long Beach',
+    nome: 'Hotel Sol Nascente',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
     preco: 110,
@@ -47,7 +47,7 @@ export const HOTEIS: Oferta[] = [
   },
   {
     id: '22',
-    nome: 'Hotel Long Beach',
+    nome: 'Hotel Varandas',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
     preco: 150,
@@ -55,7 +55,7 @@ export const HOTEIS: Oferta[] = [
   },
   {
     id: '23',
-    nome: 'Hotel Long Beach',
+    nome: 'Hotel Vila Estrelada',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
     preco: 120,
@@ -64,7 +64,7 @@ export const HOTEIS: Oferta[] = [
   },
   {
     id: '24',
-    nome: 'Hotel Long Beach',
+    nome: 'Óasis Hotel',
     categoria: 'hotel',
     descricao: '2 diárias em quarto vistas para o mar',
     preco: 140,
