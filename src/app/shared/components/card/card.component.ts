@@ -8,6 +8,7 @@ import { Oferta } from 'src/app/models/oferta';
 })
 export class CardComponent implements OnInit {
   @Input() ofertas: Oferta;
+  @Input() loading: boolean;
   @Output() cliqueComprar = new EventEmitter<Oferta>();
 
   imagemUrl: string = '../../../assets/images/hotel-presidente-4s.jpg';
