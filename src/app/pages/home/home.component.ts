@@ -3,9 +3,7 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Oferta } from 'src/app/models/oferta';
-import { ENTRETENIMENTOS } from 'src/assets/mocks/mock-entretenimentos';
-import { GASTRONOMIAS } from 'src/assets/mocks/mock-gastronomias';
-import { HOTEIS } from 'src/assets/mocks/mock-hoteis';
+import { DADOS } from 'src/assets/mocks/mock-dados';
 import * as OfertaActions from '../../shared/store/actions/oferta.actions';
 
 @Component({
@@ -14,49 +12,44 @@ import * as OfertaActions from '../../shared/store/actions/oferta.actions';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  hoteis: Oferta[] = HOTEIS;
-  gastronomias: Oferta[] = GASTRONOMIAS;
-  entretenimentos: Oferta[] = ENTRETENIMENTOS;
+  hoteis: Oferta[];
+  gastronomias: Oferta[];
+  entretenimentos: Oferta[];
+  dados: Oferta[] = DADOS;
+  loading: boolean = true;
 
   private oferta$: Observable<Oferta>;
 
   constructor(private router: Router, private store: Store) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.filtrarHoteis();
+    this.filtrarGastronomias();
+    this.filtrarEntretenimentos();
+    setTimeout(() => (this.loading = !this.loading), 2500);
+  }
 
-  comprar(event: Oferta) {
+  public comprar(event: Oferta): void {
+    console.log(event);
     this.router.navigate([`oferta/${event.id}`]);
     this.store.dispatch(OfertaActions.ofertaEscolhida({ oferta: event }));
   }
 
-  scrollLeft(id: string) {
-    var container = document.getElementById(id);
-    this.sideScroll(container, 'left', 40, 260, 10);
+  private filtrarGastronomias(): void {
+    this.gastronomias = this.dados.filter((dado) => {
+      return dado.categoria === 'gastronomia';
+    });
   }
 
-  scrollRight(id: string) {
-    var container = document.getElementById(id);
-    this.sideScroll(container, 'right', 40, 260, 10);
+  private filtrarEntretenimentos(): void {
+    this.entretenimentos = this.dados.filter((dado) => {
+      return dado.categoria === 'entretenimento';
+    });
   }
 
-  sideScroll(
-    element: any,
-    direction: string,
-    speed: number,
-    distance: number,
-    step: number
-  ) {
-    let scrollAmount = 0;
-    var slideTimer = setInterval(function () {
-      if (direction == 'left') {
-        element.scrollLeft -= step;
-      } else {
-        element.scrollLeft += step;
-      }
-      scrollAmount += step;
-      if (scrollAmount >= distance) {
-        window.clearInterval(slideTimer);
-      }
-    }, speed);
+  private filtrarHoteis(): void {
+    this.hoteis = this.dados.filter((dado) => {
+      return dado.categoria === 'hotel';
+    });
   }
 }

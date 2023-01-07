@@ -1,88 +1,23 @@
 <section class="container">
-  <p class="container__title">Hoteis</p>
-  <div class="container__cards">
-    <button
-      id="botao-esquerdo"
-      class="botao-slide"
-      (click)="scrollLeft('scrolling-wrapper-hoteis')"
-    >
-      <
-    </button>
-    <div
-      id="scrolling-wrapper-hoteis"
-      class="container__card scrolling-wrapper"
-    >
-      <ng-container *ngFor="let hotel of hoteis">
-        <app-card
-          [ofertas]="hotel"
-          (cliqueComprar)="comprar($event)"
-        ></app-card>
-      </ng-container>
-    </div>
-    <button
-      id="botao-direito"
-      class="botao-slide"
-      (click)="scrollRight('scrolling-wrapper-hoteis')"
-    >
-      >
-    </button>
-  </div>
-
-  <p class="container__title">Gastronomia</p>
-  <div class="container__cards">
-    <button
-      id="botao-esquerdo"
-      class="botao-slide"
-      (click)="scrollLeft('scrolling-wrapper-gastronomias')"
-    >
-      <
-    </button>
-    <div
-      id="scrolling-wrapper-gastronomias"
-      class="container__card scrolling-wrapper"
-    >
-      <ng-container *ngFor="let gastronomia of gastronomias">
-        <app-card
-          [ofertas]="gastronomia"
-          (cliqueComprar)="comprar($event)"
-        ></app-card>
-      </ng-container>
-    </div>
-    <button
-      id="botao-direito"
-      class="botao-slide"
-      (click)="scrollRight('scrolling-wrapper-gastronomias')"
-    >
-      >
-    </button>
-  </div>
-
-  <p class="container__title">Entretenimento</p>
-  <div class="container__cards">
-    <button
-      id="botao-esquerdo"
-      class="botao-slide"
-      (click)="scrollLeft('scrolling-wrapper-entretenimentos')"
-    >
-      <
-    </button>
-    <div
-      id="scrolling-wrapper-entretenimentos"
-      class="container__card scrolling-wrapper"
-    >
-      <ng-container *ngFor="let entretenimento of entretenimentos">
-        <app-card
-          [ofertas]="entretenimento"
-          (cliqueComprar)="comprar($event)"
-        ></app-card>
-      </ng-container>
-    </div>
-    <button
-      id="botao-direito"
-      class="botao-slide"
-      (click)="scrollRight('scrolling-wrapper-entretenimentos')"
-    >
-      >
-    </button>
-  </div>
+  <app-secao-categoria
+    nomeSecao="Hoteis"
+    idScrollingWrapper="scrolling-wrapper-hoteis"
+    [dados]="hoteis"
+    [loading]="loading"
+    (comprar)="comprar($event)"
+  ></app-secao-categoria>
+  <app-secao-categoria
+    nomeSecao="Gastronomias"
+    idScrollingWrapper="scrolling-wrapper-gastronomias"
+    [dados]="gastronomias"
+    [loading]="loading"
+    (comprar)="comprar($event)"
+  ></app-secao-categoria>
+  <app-secao-categoria
+    nomeSecao="Entretenimento"
+    idScrollingWrapper="scrolling-wrapper-entretenimentos"
+    [dados]="entretenimentos"
+    [loading]="loading"
+    (comprar)="comprar($event)"
+  ></app-secao-categoria>
 </section>
