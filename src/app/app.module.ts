@@ -7,8 +7,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { OfertaModule } from './pages/oferta/oferta.module';
-import { ComponentsModule } from './shared/components/components.module';
 import { HomeModule } from './pages/home/home.module';
+import { NavbarModule } from './shared/components/navbar/navbar.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,11 +18,11 @@ import { HomeModule } from './pages/home/home.module';
     AppRoutingModule,
     HomeModule,
     OfertaModule,
-    ComponentsModule,
     StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
     }),
+    NavbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
