@@ -1,6 +1,6 @@
 import { Oferta } from 'src/app/models/oferta';
 
-export const ENTRETENIMENTOS: Oferta[] = [
+export const DADOS: Oferta[] = [
   {
     id: '1',
     nome: 'Cinemark',
