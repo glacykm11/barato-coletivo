@@ -1,0 +1,26 @@
+<p class="container__title">{{ nomeSecao }}</p>
+<div class="container__cards">
+  <button
+    id="botao-esquerdo"
+    class="botao-slide"
+    (click)="scrollLeft(idScrollingWrapper)"
+  >
+    <
+  </button>
+  <div [id]="idScrollingWrapper" class="container__card scrolling-wrapper">
+    <ng-container *ngFor="let dado of dados">
+      <app-card
+        [loading]="loading"
+        [ofertas]="dado"
+        (cliqueComprar)="armazenarCompraSelecionada($event)"
+      ></app-card>
+    </ng-container>
+  </div>
+  <button
+    id="botao-direito"
+    class="botao-slide"
+    (click)="scrollRight(idScrollingWrapper)"
+  >
+    >
+  </button>
+</div>
