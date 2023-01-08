@@ -20,6 +20,7 @@ export class PagamentoComponent implements OnInit {
   });
   oferta$: Observable<Oferta[]>;
   ofertas: Oferta[] = [];
+  resumoCompra: Oferta[] = [];
   totalOfertas = 0;
 
   constructor(private store: Store) {}
@@ -27,6 +28,7 @@ export class PagamentoComponent implements OnInit {
   ngOnInit(): void {
     this.obterOfertasSelecionadas();
     this.totalOfertasCompradas();
+    this.resumirCompra();
   }
 
   onSubmit() {
@@ -50,8 +52,24 @@ export class PagamentoComponent implements OnInit {
   }
 
   totalOfertasCompradas() {
-    this.ofertas.forEach((oferta) => {
-      this.totalOfertas += oferta.preco;
-    });
+    let somaTotal = 0;
+    for (let i; i < this.ofertas.length; i++) {
+      somaTotal += this.ofertas[i].preco;
+    }
+
+    this.totalOfertas = somaTotal;
+  }
+
+  resumirCompra() {
+    const ofertasNaoDuplicadas = this.ofertas.reduce((acc, current) => {
+      const x = acc.find((item) => item.id === current.id);
+      if (!x) {
+        return acc.concat([current]);
+      } else {
+        return acc;
+      }
+    }, []);
+
+    this.resumoCompra = ofertasNaoDuplicadas;
   }
 }

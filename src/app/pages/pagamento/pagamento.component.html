@@ -54,7 +54,7 @@
   <section class="container__resumo-compra">
     <h1 class="container__titulo">Resumo da compra</h1>
     <section class="container__precos">
-      <article *ngFor="let oferta of ofertas">
+      <article *ngFor="let oferta of resumoCompra">
         <p class="container__texto">{{ oferta?.nome }}</p>
         <p class="container__texto">
           {{ quantidadeOferta(oferta) }}x {{ oferta?.preco | currency : "BRL" }}
