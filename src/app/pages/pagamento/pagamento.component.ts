@@ -21,7 +21,6 @@ export class PagamentoComponent implements OnInit {
   oferta$: Observable<Oferta[]>;
   ofertas: Oferta[] = [];
   totalOfertas = 0;
-  oferta;
 
   constructor(private store: Store) {}
 
