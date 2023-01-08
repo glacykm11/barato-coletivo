@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
   }
 
   public comprar(event: Oferta): void {
-    console.log(event);
     this.router.navigate([`oferta/${event.id}`]);
     this.store.dispatch(OfertaActions.ofertaEscolhida({ oferta: event }));
   }
