@@ -40,6 +40,15 @@ export class PagamentoComponent implements OnInit {
     this.oferta$.subscribe((resp) => (this.ofertas = resp));
   }
 
+  quantidadeOferta(oferta: Oferta): number {
+    const ofertas = this.ofertas.filter(
+      (elemento) => elemento.id === oferta.id
+    );
+    let ofertasExistenetsPorId = ofertas.length;
+
+    return ofertasExistenetsPorId;
+  }
+
   totalOfertasCompradas() {
     this.ofertas.forEach((oferta) => {
       this.totalOfertas += oferta.preco;
