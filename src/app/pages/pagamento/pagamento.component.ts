@@ -35,6 +35,7 @@ export class PagamentoComponent implements OnInit {
     alert('Sua compra foi finalizada com sucesso!');
     this.store.dispatch(OfertaActions.limparCarrinho());
     this.totalOfertas = 0;
+    this.resumoCompra = [];
   }
 
   obterOfertasSelecionadas() {
@@ -52,12 +53,9 @@ export class PagamentoComponent implements OnInit {
   }
 
   totalOfertasCompradas() {
-    let somaTotal = 0;
-    for (let i; i < this.ofertas.length; i++) {
-      somaTotal += this.ofertas[i].preco;
-    }
-
-    this.totalOfertas = somaTotal;
+    this.ofertas.forEach((oferta) => {
+      this.totalOfertas += oferta.preco;
+    });
   }
 
   resumirCompra() {
