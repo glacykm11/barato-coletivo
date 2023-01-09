@@ -16,9 +16,7 @@ export class HomeComponent implements OnInit {
   gastronomias: Oferta[];
   entretenimentos: Oferta[];
   dados: Oferta[] = DADOS;
-  loading: boolean = true;
-
-  private oferta$: Observable<Oferta>;
+  loading: boolean = false;
 
   constructor(private router: Router, private store: Store) {}
 
@@ -26,7 +24,7 @@ export class HomeComponent implements OnInit {
     this.filtrarHoteis();
     this.filtrarGastronomias();
     this.filtrarEntretenimentos();
-    setTimeout(() => (this.loading = !this.loading), 2500);
+    //setTimeout(() => (this.loading = !this.loading), 2500);
   }
 
   public comprar(event: Oferta): void {
