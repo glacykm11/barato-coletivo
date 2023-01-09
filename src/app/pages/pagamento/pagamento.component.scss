@@ -68,11 +68,29 @@
 
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
-
 }
 
 input[type=number] {
     -moz-appearance: textfield;
     appearance: textfield;
+}
 
+@media (max-width: 699px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        &__linha {
+            display: none;
+        }
+
+        &__precos,
+        &__texto--total {
+            text-align: left !important;
+        }
+
+        &__texto--total {
+            padding-left: 0;
+        }
+    }
 }
