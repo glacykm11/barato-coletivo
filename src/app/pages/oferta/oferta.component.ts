@@ -26,7 +26,7 @@ export class OfertaComponent implements OnInit {
     this.oferta$ = this.store.select(selectFeatureOferta);
     this.oferta$.subscribe((resp) => {
       this.oferta = resp;
-      this.ofertasSelecionadas.push(this.oferta);
+      this.ofertasSelecionadas = [...this.ofertasSelecionadas, resp];
     });
   }
 
