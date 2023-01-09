@@ -111,39 +111,39 @@ export const DADOS: Oferta[] = [
   },
   {
     id: '13',
-    nome: 'Fogão a lenha',
+    nome: 'Dona Benta',
     categoria: 'gastronomia',
     descricao: '2 diárias em quarto vistas para o mar',
     preco: 200,
     imagemUrl:
-      'https://blog.serraimperial.com/wp-content/uploads/2020/07/A-gastronomia-%C3%A9-parte-fundamental-de-uma-experi%C3%AAncia-tur%C3%ADstica.png',
+      'https://static5.depositphotos.com/1000857/535/i/600/depositphotos_5355350-stock-photo-restaurant-table-set-awaiting-guests.jpg',
   },
   {
     id: '14',
-    nome: 'Panela de ferro',
+    nome: 'Dona Benta',
     categoria: 'gastronomia',
     descricao: '2 diárias em quarto vistas para o mar',
     preco: 500,
     imagemUrl:
-      'https://soubh.uai.com.br/uploads/post/image/11565/main_destaque_Risoto_surf_and_turf_-_cr%C3%A9dito_Victor_Schwaner.jpg',
+      'https://www.pracadopapa.com.br/wp-content/uploads/2022/01/Melhores-Restaurantes-de-Belo-Horizonte.jpg',
   },
   {
     id: '15',
-    nome: 'Sabores na panela',
+    nome: 'Cozinha do Zé',
     categoria: 'gastronomia',
     descricao: '2 diárias em quarto vistas para o mar',
     preco: 335,
     imagemUrl:
-      'https://diaonline.ig.com.br/aproveite/wp-content/uploads/2020/04/alta-gastronomia-em-goiania-restaurantes-para-voce-aproveitar.jpeg',
+      'https://vinicolaaraucaria.com.br/wp-content/uploads/2020/06/interna_restaurante-1-1400x700.jpg',
   },
   {
     id: '16',
-    nome: 'Recanto de comida caseira',
+    nome: 'Carpaccio',
     categoria: 'gastronomia',
     descricao: '2 diárias em quarto vistas para o mar',
     preco: 220,
     imagemUrl:
-      'https://media.gazetadopovo.com.br/bomgourmet/2018/04/polvo-768x307-aec66e70.jpg',
+      'https://blog.consumer.com.br/wp-content/uploads/2020/11/culin%C3%A1ria-regional-brasileira.jpg',
   },
   {
     id: '17',
