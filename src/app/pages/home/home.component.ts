@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
 import { Oferta } from 'src/app/models/oferta';
 import { DADOS } from 'src/assets/mocks/mock-dados';
 import * as OfertaActions from '../../shared/store/actions/oferta.actions';
