@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Oferta } from 'src/app/models/oferta';
 import { selectOfertasSelecionadas } from '../../shared/store/selectors/ofertas-selecionadas.selector';
@@ -13,17 +18,17 @@ import { Observable } from 'rxjs';
 })
 export class PagamentoComponent implements OnInit {
   pagamentoForm = new FormGroup({
-    numeroCartao: new FormControl(''),
-    nomeImpressoCartao: new FormControl(''),
-    validadeCartao: new FormControl(''),
-    codigoSegurancaCartao: new FormControl(''),
+    numeroCartao: new FormControl('', Validators.required),
+    nomeImpressoCartao: new FormControl('', Validators.required),
+    validadeCartao: new FormControl('', Validators.required),
+    codigoSegurancaCartao: new FormControl('', Validators.required),
   });
   oferta$: Observable<Oferta[]>;
   ofertas: Oferta[] = [];
   resumoCompra: Oferta[] = [];
   totalOfertas = 0;
 
-  constructor(private store: Store) {}
+  constructor(private store: Store, private fb: FormBuilder) {}
 
   ngOnInit(): void {
     this.obterOfertasSelecionadas();

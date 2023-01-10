@@ -66,6 +66,12 @@
     }
 }
 
+button:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
